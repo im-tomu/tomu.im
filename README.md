@@ -14,6 +14,43 @@ I have two buttons and two LEDs!
 <iframe style="min-height: 200px;" src="https://docs.google.com/presentation/d/1XT5oWsYzFATEelErZnxvSWVnVSFUm2gO2fWi31SKbWI/embed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 {% endraw %}
 
+# Help us!
+
+These are currently the top items which need to be done related to the Tomu. If
+you help out, [@mithro](https://github.com/mithro) will probably send you a
+Tomu device!
+
+### Creating (or porting) a FOSS USB stack to EFM32HG
+
+To make it easy for people to develop new applications of the Tomu, we need a
+good USB stack which is compatible with the EFM32HG.
+
+There are a couple of possible options;
+ * [Porting LUFA](https://github.com/im-tomu/tomu-samples/issues/2) - Someone
+   seems to have already started the EFM32 series, just not the EFM32HG.
+ * Other options?
+
+### [Creating (or porting) U2F / FIDO compatible firmware](https://github.com/im-tomu/tomu-samples/issues/3)
+
+The ultimate goal of the Tomu is to be used as a 2nd factor authentication
+device. For this to work [someone needs to write firmware compatible if the FIDO
+protocol](https://github.com/im-tomu/tomu-samples/issues/3).
+
+There are already a bunch of things which seem like it would make this easier like;
+[micro-ecc](https://github.com/kmackay/micro-ecc),
+[Nitrokey](https://github.com/Nitrokey),
+[u2f-zero](https://github.com/conorpp/u2f-zero) and
+[stm32-u2f](https://github.com/avivgr/stm32-u2f).
+
+
+### [QEmu Emulation of the EFM32HG](https://github.com/im-tomu/qemu)
+
+We would like to have good emulation of the features in the EFM32HG309
+processor so that people can write software for the board without having to
+have the hardware.
+
+The biggest part of this is the emulation of the USB stack.
+
 
 # Tomu Hardware
 
@@ -38,10 +75,10 @@ All Tomu boards have;
 ### Specs
 
  * Uses a Silicon Labs Happy Gecko EFM32HG309
-  - 25MHz ARM Cortex-M0+
-  - 8kb^ RAM
-  - 64kb^ Flash
-  - USB 2.0
+   - 25MHz ARM Cortex-M0+
+   - 8kb^ RAM
+   - 64kb^ Flash
+   - USB 2.0
 
  * Literally 12 Parts
  * BOM ~$10 USD from Digikey (in individual quantities)
@@ -59,10 +96,10 @@ All Tomu boards have;
 ### Specs
 
  * Uses a Freescale Semiconductor / NXP Kinetis KL27 (MKL27Z256VFM4)
-  - 48MHz ARM Cortex-M0+
-  - 32kb^ RAM
-  - 256kb^ Flash
-  - USB 2.0
+   - 48MHz ARM Cortex-M0+
+   - 32kb^ RAM
+   - 256kb^ Flash
+   - USB 2.0
 
  * Optional Atmel ATECC508A Hardware Crypto Chip
 
