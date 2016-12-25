@@ -1,3 +1,7 @@
+---
+layout: default
+title: A tiny ARM microprocessor which fits in your USB port.
+---
 
 # [Tomu, I'm](tomu.im)
 
