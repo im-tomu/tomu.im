@@ -4,10 +4,10 @@ title: A tiny ARM microprocessor which fits in your USB port.
 permalink: /
 ---
 
-# [Tomu, I'm](tomu.im)
+# [Tomu, I'm](https://tomu.im)
 
-[I'm Tomu](tomu.im) a tiny ARM microprocessor which fits in your USB port. 
-I have two buttons and two LEDs!
+[I'm Tomu](https://tomu.im) a tiny ARM microprocessor which fits in your USB
+port. I have two buttons and two LEDs!
 
 
 {% raw %}
