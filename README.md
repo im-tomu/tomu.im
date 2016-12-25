@@ -26,6 +26,7 @@ To make it easy for people to develop new applications of the Tomu, we need a
 good USB stack which is compatible with the EFM32HG.
 
 There are a couple of possible options;
+
  * [Porting LUFA](https://github.com/im-tomu/tomu-samples/issues/2) - Someone
    seems to have already started the EFM32 series, just not the EFM32HG.
  * Other options?
