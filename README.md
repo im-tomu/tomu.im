@@ -51,6 +51,12 @@ have the hardware.
 
 The biggest part of this is the emulation of the USB stack.
 
+### Creation of Tomu bootloader programming rig
+
+The EFM32HG come with a bootloader which doesn't work without an external
+crystal. We thus need to replace the bootloader with a version that does. It
+would be good to have a standard rig which allows programming of multiple Tomu
+boards (a whole panel) at once.
 
 # Tomu Hardware
 
@@ -70,6 +76,8 @@ All Tomu boards have;
 
 ## Tomu
 
+ * **Status**: Hardware complete, simple flashing firmware working. Needs proper
+   firmware.
  * [GitHub Repository](https://github.com/im-tomu/tomu-hardware)
 
 ### Specs
@@ -87,11 +95,21 @@ All Tomu boards have;
 
  * [v0.2](https://github.com/im-tomu/tomu-hardware/tree/master/releases/v0.2/gerbers)
 
+The important thing to note is that you need a PCB that is 0.8mm thickness **or
+less**. The default thickness is normally 1.0mm and **1.0mm is too thick**.
+
+These gerbers should be possible with the following manufacturers;
+
+ * (Tested) [Hackvana](http://www.hackvana.com/store/)
+ * (Undergoing testing) [DirtyPCB](http://dirtypcbs.com/store/pcbs)
+ * (Undergoing testing) [Seeed Studio](https://www.seeedstudio.com/fusion_pcb.html)
+ * (Yet to be ordered) [OHS Park - 2 Layer 2oz 0.8mm Service](http://docs.oshpark.com/services/two-layer-hhdc/)
+
 
 ## Tomu+
 
+ * **Status**: First prototypes in construction.
  * [GitHub Repository](https://github.com/im-tomu/tomuplus-hardware)
- * Hardware still under development
  
 ### Specs
 
@@ -105,10 +123,6 @@ All Tomu boards have;
 
  * BOM ~$15 USD from Digikey (in individual quantities)
 
-
-# Tomu Software
-
-Tomu software is currently under development and needs your help!
 
 # Contact
 
