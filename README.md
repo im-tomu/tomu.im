@@ -127,7 +127,6 @@ These gerbers should be possible with the following manufacturers;
    - USB 2.0
 
  * Optional Atmel ATECC508A Hardware Crypto Chip
-
  * BOM ~$15 USD from Digikey (in individual quantities)
 
 
