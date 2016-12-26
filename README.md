@@ -31,7 +31,9 @@ There are a couple of possible options;
    seems to have already started the EFM32 series, just not the EFM32HG.
  * Other options?
 
-### [Creating (or porting) U2F / FIDO compatible firmware](https://github.com/im-tomu/tomu-samples/issues/3)
+### Creating (or porting) U2F / FIDO compatible firmware
+
+ * [More Info](https://github.com/im-tomu/tomu-samples/issues/3)
 
 The ultimate goal of the Tomu is to be used as a 2nd factor authentication
 device. For this to work [someone needs to write firmware compatible if the FIDO
@@ -44,7 +46,9 @@ There are already a bunch of things which seem like it would make this easier li
 [stm32-u2f](https://github.com/avivgr/stm32-u2f).
 
 
-### [QEmu Emulation of the EFM32HG](https://github.com/im-tomu/qemu)
+### QEmu Emulation of the EFM32HG
+
+ * [Code Repo](https://github.com/im-tomu/qemu)
 
 We would like to have good emulation of the features in the EFM32HG309
 processor so that people can write software for the board without having to
