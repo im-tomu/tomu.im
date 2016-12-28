@@ -37,6 +37,7 @@ There are a couple of possible options;
 
  * [Porting LUFA](https://github.com/im-tomu/tomu-samples/issues/2) - Someone
    seems to have already started the EFM32 series, just not the EFM32HG.
+ * [Port ChibiOS](https://github.com/im-tomu/tomu-samples/issues/11)
  * Other options?
 
 ### Creating (or porting) U2F / FIDO compatible firmware
