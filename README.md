@@ -9,6 +9,9 @@ permalink: /
 [I'm Tomu](https://tomu.im) a tiny ARM microprocessor which fits in your USB
 port. I have two buttons and two LEDs!
 
+I'm fully open source, have a BOM of ~$10 (in individual quantities) and am
+constructable by hobbyists! Designed for 2-factor authentication or anything
+else you can think of.
 
 {% raw %}
 <iframe style="min-height: 400px;" src="https://docs.google.com/presentation/d/1XT5oWsYzFATEelErZnxvSWVnVSFUm2gO2fWi31SKbWI/embed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -67,6 +70,13 @@ The EFM32HG come with a bootloader which doesn't work without an external
 crystal. We thus need to replace the bootloader with a version that does. It
 would be good to have a standard rig which allows programming of multiple Tomu
 boards (a whole panel) at once.
+
+# Contact
+
+ * [Announcement mailing list](https://groups.google.com/forum/#!forum/tomu-announce/join) - Low traffic list for announcements.
+ * [Discussion mailing list](https://groups.google.com/forum/#!forum/tomu-discuss/join) - List for discussing development / new features / etc.
+ * [IRC Channel - irc://irc.freenode.net/#tomu](https://webchat.freenode.net/?channels=#tomu) - IRC channel for discussing anything related to the project.
+
 
 # Tomu Hardware
 
@@ -133,10 +143,20 @@ These gerbers should be possible with the following manufacturers;
  * BOM ~$15 USD from Digikey (in individual quantities)
 
 
-# Contact
+# License
 
- * [Announcement mailing list](https://groups.google.com/forum/#!forum/tomu-announce/join) - Low traffic list for announcements.
- * [Discussion mailing list](https://groups.google.com/forum/#!forum/tomu-discuss/join) - List for discussing development / new features / etc.
- * [IRC Channel - irc://irc.freenode.net/#tomu](https://webchat.freenode.net/?channels=#tomu) - IRC channel for discussing anything related to the project.
+The Tomu hardware is under your choice of;
 
+ * the "Creative Commons Attribution-ShareAlike 4.0 International License"
+   (CC BY-SA 4.0) full text of this license is included in the LICENSE file
+   and a copy can also be found at
+   http://creativecommons.org/licenses/by-sa/4.0/
 
+ * the "TAPR Open Hardware License" full text of this license is included
+   in the LICENSE file and a copy can also be found at
+   http://www.tapr.org/OHL
+
+Software for Tomu is under various licenses, please consult the license
+included with the code.
+
+![Open Source Hardware Certification AU0000001](oshw-au000001.png)
