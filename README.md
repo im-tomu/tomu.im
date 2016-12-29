@@ -46,7 +46,7 @@ else you can think of.
 <br>
 {% endraw %}
 
-<hr>
+<hr><br><br>
 
 # Getting Started!
 
@@ -56,7 +56,7 @@ else you can think of.
  * To get the USB bootloader to come up, you must connect C pin to VCC.
  * [Random Starting instructions here](https://groups.google.com/forum/#!topic/tomu-discuss/r-LS0C7hjko)
 
-<hr>
+<hr><br><br>
 
 # Help us!
 
@@ -108,7 +108,7 @@ crystal. We thus need to replace the bootloader with a version that does. It
 would be good to have a standard rig which allows programming of multiple Tomu
 boards (a whole panel) at once.
 
-<hr>
+<hr><br><br>
 
 # Contact
 
@@ -116,7 +116,7 @@ boards (a whole panel) at once.
  * [Discussion mailing list](https://groups.google.com/forum/#!forum/tomu-discuss/join) - List for discussing development / new features / etc.
  * [IRC Channel - irc://irc.freenode.net/#tomu](https://webchat.freenode.net/?channels=#tomu) - IRC channel for discussing anything related to the project.
 
-<hr>
+<hr><br><br>
 
 # Tomu Hardware
 
@@ -182,7 +182,7 @@ These gerbers should be possible with the following manufacturers;
  * Optional Atmel ATECC508A Hardware Crypto Chip
  * BOM ~$15 USD from Digikey (in individual quantities)
 
-<hr>
+<hr><br><br>
 
 # License
 
