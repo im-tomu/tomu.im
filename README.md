@@ -10,8 +10,8 @@ permalink: /
 
 There are ~100 @ 33C3. Submit a pull request to get one!
 
-### Hack Session
-#### 2016/12/30 14:00
+## Hack Session
+### 2016/12/30 14:00
 
 The RIAT Crypto Lab will be running a Tomu "Hack" session at 33C3 tomorrow at
 2:00pm (2016/12/30 14:00).
