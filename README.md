@@ -28,7 +28,7 @@ boards (and maybe even have a few Tomu+ boards).
 
 # [Tomu, I'm](https://tomu.im)
 
-[I'm Tomu](https://tomu.im) a tiny ARM microprocessor which fits in your USB
+[I'm Tomu](https://tomu.im), a tiny ARM microprocessor which fits in your USB
 port. I have two buttons and two LEDs!
 
 I'm fully open source, have a BOM of ~$10 (in individual quantities) and am
@@ -64,7 +64,7 @@ Tomu device!
 To make it easy for people to develop new applications of the Tomu, we need a
 good USB stack which is compatible with the EFM32HG.
 
-There are a couple of possible options;
+There are a couple of possible options:
 
  * [Porting LUFA](https://github.com/im-tomu/tomu-samples/issues/2) - Someone
    seems to have already started the EFM32 series, just not the EFM32HG.
@@ -118,13 +118,13 @@ boards (a whole panel) at once.
 Built out of a 3d printed part + 2 layer "thin" PCB (0.4mm, 0.6mm or 0.8mm
 thick).
 
-Both boards have;
+Both boards have:
 
  * 6mil traces
  * 6mil clearance
  * 0.3mm drill / 0.6mm vias
 
-All Tomu boards have;
+All Tomu boards have:
 
  * At least 2 different color LEDs
  * At least 2 touch buttons
