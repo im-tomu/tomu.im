@@ -174,10 +174,10 @@ The Tomu hardware is under your choice of;
  * the "Creative Commons Attribution-ShareAlike 4.0 International License"
    (CC BY-SA 4.0) full text of this license is included in the LICENSE file
    and a copy can also be found at
-   http://creativecommons.org/licenses/by-sa/4.0/
+   [http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/)
  * the "TAPR Open Hardware License" full text of this license is included
    in the LICENSE file and a copy can also be found at
-   http://www.tapr.org/OHL
+   [http://www.tapr.org/OHL](http://www.tapr.org/OHL)
 
 Software for Tomu is under various licenses, please consult the license
 included with the code.
