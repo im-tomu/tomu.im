@@ -4,23 +4,11 @@ title: A tiny ARM microprocessor which fits in your USB port.
 permalink: /
 ---
 
-# Tomu @ 33C3
+# Tomu @ LCA2017
 
-There are ~100 @ 33C3. Submit a pull request to get one!
+There are ~100 @ LCA2017. Submit a pull request to get one!
 
-## Hack Session
-
-The RIAT Crypto Lab will be running a Tomu "Hack" session at 33C3 tomorrow at
-2:00pm (2016/12/30 14:00).
-
-### 2016/12/30 14:00
-
-The aim will to get people set up with the tool chain, loading the blinking
-firmware and other similar things. There will also be a chance to get Tomu
-boards (and maybe even have a few Tomu+ boards).
-
- * [Hacking Session](https://events.ccc.de/congress/2016/wiki/Session:Hacking_Tomu_and_2FA)
- * [Meet RIAT Crypto Lab](https://events.ccc.de/congress/2016/wiki/Assembly:RIAT_Crypto_Lab)
+<img src="https://linux.conf.au/site_media/static/lca2017/images/svgs/illustrations/tuz.svg">
 
 <hr>
 <br>
