@@ -35,8 +35,8 @@ else you can think of.
 
 ## FIXME! Someone should add something here....
 
- * All Tomu boards have been loaded with USB bootloader.
- * To get the USB bootloader to come up, you must connect C pin to VCC.
+ * All Tomu boards have been loaded with a USB bootloader.
+ * To get the USB bootloader to come up, you must connect the C pin to Vcc.
  * [Random Starting instructions here](https://groups.google.com/forum/#!topic/tomu-discuss/r-LS0C7hjko)
 
 <hr><br><br>
@@ -49,7 +49,7 @@ Tomu device!
 
 ### Creating (or porting) a FOSS USB stack to EFM32HG
 
-To make it easy for people to develop new applications of the Tomu, we need a
+To make it easy for people to develop new applications for the Tomu, we need a
 good USB stack which is compatible with the EFM32HG.
 
 There are a couple of possible options:
@@ -64,10 +64,10 @@ There are a couple of possible options:
  * [More Info](https://github.com/im-tomu/tomu-samples/issues/3)
 
 The ultimate goal of the Tomu is to be used as a 2nd factor authentication
-device. For this to work [someone needs to write firmware compatible if the FIDO
+device. For this to work [someone needs to write firmware compatible with the FIDO
 protocol](https://github.com/im-tomu/tomu-samples/issues/3).
 
-There are already a bunch of things which seem like it would make this easier like;
+There are already a bunch of things which could make this easier:
 [micro-ecc](https://github.com/kmackay/micro-ecc),
 [Nitrokey](https://github.com/Nitrokey),
 [u2f-zero](https://github.com/conorpp/u2f-zero) and
@@ -86,7 +86,7 @@ The biggest part of this is the emulation of the USB stack.
 
 ### Creation of Tomu bootloader programming rig
 
-The EFM32HG come with a bootloader which doesn't work without an external
+The EFM32HG comes with a bootloader which doesn't work without an external
 crystal. We thus need to replace the bootloader with a version that does. It
 would be good to have a standard rig which allows programming of multiple Tomu
 boards (a whole panel) at once.
@@ -131,7 +131,7 @@ All Tomu boards have:
    - 64kb^ Flash
    - USB 2.0
 
- * Literally 12 Parts
+ * Literally 12 parts
  * BOM ~$10 USD from Digikey (in individual quantities)
 
 ### Gerbers
@@ -141,7 +141,7 @@ All Tomu boards have:
 The important thing to note is that you need a PCB that is 0.8mm thickness **or
 less**. The default thickness is normally 1.0mm and **1.0mm is too thick**.
 
-These gerbers should be possible with the following manufacturers;
+These gerbers should be possible with the following manufacturers:
 
  * (Tested) [Hackvana](http://www.hackvana.com/store/)
  * (Undergoing testing) [DirtyPCB](http://dirtypcbs.com/store/pcbs)
@@ -169,7 +169,7 @@ These gerbers should be possible with the following manufacturers;
 
 # License
 
-The Tomu hardware is under your choice of;
+The Tomu hardware is under your choice of:
 
  * the "Creative Commons Attribution-ShareAlike 4.0 International License"
    (CC BY-SA 4.0) full text of this license is included in the LICENSE file
