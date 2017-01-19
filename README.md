@@ -33,11 +33,9 @@ else you can think of.
 
 # Getting Started!
 
-## FIXME! Someone should add something here....
-
  * All Tomu boards have been loaded with a USB bootloader.
  * To get the USB bootloader to come up, you must connect the C pin to Vcc.
- * [Random Starting instructions here](https://groups.google.com/forum/#!topic/tomu-discuss/r-LS0C7hjko)
+ * For further steps refer to this [Getting Started Guide](https://groups.google.com/forum/#!topic/tomu-discuss/r-LS0C7hjko)
 
 <hr><br><br>
 
