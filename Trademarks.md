@@ -1,3 +1,9 @@
+---
+layout: default
+title: Tomu Trademark Policy
+permalink: /trademarks
+---
+
 # Tomu Trademark Policy
 
 *Updated: December 17, 2017*
