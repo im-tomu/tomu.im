@@ -4,16 +4,6 @@ title: A tiny ARM microprocessor which fits in your USB port.
 permalink: /
 ---
 
-# Tomu @ LCA2017
-
-There are ~100 @ LCA2017. Submit a pull request to get one!
-
-<img src="https://linux.conf.au/site_media/static/lca2017/images/svgs/illustrations/tuz.svg">
-
-<hr>
-<br>
-<br>
-
 # [Tomu, I'm](https://tomu.im)
 
 [I'm Tomu](https://tomu.im), a tiny ARM microprocessor which fits in your USB
