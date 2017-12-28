@@ -137,24 +137,6 @@ These gerbers should be possible with the following manufacturers:
  * (Yet to be ordered) [OHS Park - 2 Layer 2oz 0.8mm Service](http://docs.oshpark.com/services/two-layer-hhdc/)
 
 
-## Tomu+
-
- * **Status**: First prototypes in construction.
- * [GitHub Repository](https://github.com/im-tomu/tomuplus-hardware)
- 
-### Specs
-
- * Uses a Freescale Semiconductor / NXP Kinetis KL27 (MKL27Z256VFM4)
-   - 48MHz ARM Cortex-M0+
-   - 32kb^ RAM
-   - 256kb^ Flash
-   - USB 2.0
-
- * Optional Atmel ATECC508A Hardware Crypto Chip
- * BOM ~$15 USD from Digikey (in individual quantities)
-
-<hr><br><br>
-
 # License
 
 The Tomu hardware is under your choice of:
