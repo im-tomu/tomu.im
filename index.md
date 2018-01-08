@@ -112,21 +112,6 @@ There are a couple of possible options:
  * [Port ChibiOS](https://github.com/im-tomu/tomu-samples/issues/11)
  * Other options?
 
-### Creating (or porting) U2F / FIDO compatible firmware
-
- * [More Info](https://github.com/im-tomu/tomu-samples/issues/3)
-
-The ultimate goal of the Tomu is to be used as a 2nd factor authentication
-device. For this to work [someone needs to write firmware compatible with the FIDO
-protocol](https://github.com/im-tomu/tomu-samples/issues/3).
-
-There are already a bunch of things which could make this easier:
-[micro-ecc](https://github.com/kmackay/micro-ecc),
-[Nitrokey](https://github.com/Nitrokey),
-[u2f-zero](https://github.com/conorpp/u2f-zero) and
-[stm32-u2f](https://github.com/avivgr/stm32-u2f).
-
-
 ### QEmu Emulation of the EFM32HG
 
  * [Code Repo](https://github.com/im-tomu/qemu)
@@ -136,13 +121,6 @@ processor so that people can write software for the board without having to
 have the hardware.
 
 The biggest part of this is the emulation of the USB stack.
-
-### Creation of Tomu bootloader programming rig
-
-The EFM32HG comes with a bootloader which doesn't work without an external
-crystal. We thus need to replace the bootloader with a version that does. It
-would be good to have a standard rig which allows programming of multiple Tomu
-boards (a whole panel) at once.
 
 <hr><br><br>
 
@@ -159,7 +137,7 @@ boards (a whole panel) at once.
 Built out of a 3d printed part + 2 layer "thin" PCB (0.4mm, 0.6mm or 0.8mm
 thick).
 
-Both boards have:
+Boards have:
 
  * 6mil traces
  * 6mil clearance
@@ -182,10 +160,9 @@ All Tomu boards have:
    - 25MHz ARM Cortex-M0+
    - 8kb^ RAM
    - 64kb^ Flash
-   - USB 2.0
+   - USB 2.0 FS and LS
 
  * Literally 12 parts
- * BOM ~$10 USD from Digikey (in individual quantities)
 
 ### Gerbers
 
