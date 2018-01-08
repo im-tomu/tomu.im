@@ -16,7 +16,11 @@ I'm also available on [Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/
 
 # Getting Started!
 
-Tomu currently uses the SiLabs serial bootloader.  One of the Crowd Supply stretch goals is a universal bootloader based on DFU.
+Because Tomu fits entirely inside your USB port, you need something to keep it from falling out.  Early Tomu prototypes were held in place using a business card folded over and wedged in the USB port, but newer releases have support for 3D printed cases.
+
+If you have a 3D printer, [download the .stl file](https://github.com/im-tomu/tomu-hardware/tree/master/case) for the version of Tomu that you have.  The version number is printed on the bottom side with the big USB connections.  Depending on how thick your PCB is, you may need to adjust the FreeCAD file.
+
+For software, Tomu currently uses the SiLabs serial bootloader.  One of the Crowd Supply stretch goals is a universal bootloader based on DFU.
 
 To use the seral bootloader, Windows users will need to install Silabs-CDC_Install.zip, e.g. from [M-Pression](https://www.m-pression.com/solutions/boards/odyssey/odyssey-downloads).  Linux and macOS users do not need to use any special drivers.
 
