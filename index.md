@@ -6,26 +6,29 @@ permalink: /
 
 # [Tomu, I'm](https://tomu.im)
 
-[I'm Tomu](https://tomu.im), a tiny ARM microprocessor which fits in your USB
+[I'm Tomu](https://www.crowdsupply.com/sutajio-kosagi/tomu/), a tiny ARM microprocessor which fits in your USB
 port. I have two buttons and two LEDs!
 
-I'm fully open source, have a BOM of ~$10 (in individual quantities) and am
-constructable by hobbyists! Designed for 2-factor authentication or anything
-else you can think of.
+I'm fully open source and am buildable by hobbyists! Designed for 2-factor
+authentication, usb experiments, or anything else you can think of.
 
-{% raw %}
-<iframe style="min-height: 400px;" src="https://docs.google.com/presentation/d/1NV4QAr7nQg5OAjLGDzVBely9bvDAFhP1qIqw7IU5Wdk/embed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-<br>
-<iframe  width="560" height="315" src="https://www.youtube.com/embed/36zcE_C0K2k" frameborder="0" allowfullscreen></iframe>
-{% endraw %}
-
-<hr><br><br>
+I'm also available on [Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!  Fully assembled and tested.
 
 # Getting Started!
 
  * All Tomu boards have been loaded with a USB bootloader.
  * To get the USB bootloader to come up, you must connect the C pin to Vcc.
  * For further steps refer to this [Getting Started Guide](https://groups.google.com/forum/#!topic/tomu-discuss/r-LS0C7hjko)
+
+<hr><br><br>
+
+# Presentations
+
+{% raw %}
+<iframe style="min-height: 400px;" src="https://docs.google.com/presentation/d/1NV4QAr7nQg5OAjLGDzVBely9bvDAFhP1qIqw7IU5Wdk/embed?start=true&loop=true&delayms=3000" frameborder="0" width="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+<br>
+<iframe  width="560" height="315" src="https://www.youtube.com/embed/36zcE_C0K2k" frameborder="0" allowfullscreen></iframe>
+{% endraw %}
 
 <hr><br><br>
 
