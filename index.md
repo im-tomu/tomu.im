@@ -16,9 +16,19 @@ I'm also available on [Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/
 
 # Getting Started!
 
- * All Tomu boards have been loaded with a USB bootloader.
- * To get the USB bootloader to come up, you must connect the C pin to Vcc.
- * For further steps refer to this [Getting Started Guide](https://groups.google.com/forum/#!topic/tomu-discuss/r-LS0C7hjko)
+Tomu currently uses the SiLabs serial bootloader.  One of the Crowd Supply stretch goals is a universal bootloader based on DFU.
+
+To use the seral bootloader, Windows users will need to install Silabs-CDC_Install.zip, e.g. from [M-Pression](https://www.m-pression.com/solutions/boards/odyssey/odyssey-downloads).  Linux and macOS users do not need to use any special drivers.
+
+1. Enter the bootloader.
+  * v0.2 boards require you to connect the C pin to Vcc.
+  * v0.3 boards always enter the bootloader
+1. Connect a terminal.
+  * TeraTerm on Windows is a good choice.
+  * screen works on Linux
+1. Type 'i' to show the bootloader version
+1. Type 'u' to upload a new program, then send the binary using XMODEM
+1. Type 'b' to boot the current program
 
 <hr><br><br>
 
