@@ -12,9 +12,13 @@ port. I have two buttons and two LEDs!
 I'm fully open source and am buildable by hobbyists! Designed for 2-factor
 authentication, usb experiments, or anything else you can think of.
 
-I'm also available on [Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!  Fully assembled and tested.
+I'm also available on [Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/), fully assembled and tested.
+
+<hr><br><br>
 
 # Getting Started!
+
+Got a Tomu?  Great!  Here's how to get started.  First you need a case, then you need the drivers.
 
 Because Tomu fits entirely inside your USB port, you need something to keep it from falling out.  Early Tomu prototypes were held in place using a business card folded over and wedged in the USB port, but newer releases have support for 3D printed cases.
 
@@ -28,12 +32,55 @@ To use the seral bootloader, Windows users will need to install Silabs-CDC_Insta
   * v0.2 boards require you to connect the C pin to Vcc.
   * v0.3 boards always enter the bootloader
 1. Connect a terminal.
-  * TeraTerm on Windows is a good choice.
-  * screen works on Linux
+  * TeraTerm on Windows is a good choice
+  * screen works on Linux and macOS
 1. Interact with the bootloader by sending one-character commands:
   * **i** -- show the bootloader version
   * **u** -- upload a new program - send the binary using XMODEM
   * **b** -- boot the current program
+
+<hr><br><br>
+
+# Back Us!
+
+Tomu is [crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!  While software is mostly easy to update, hardware is more challenging.  There are several stretch goals as part of the campaign, if we get enough support:
+
+### DFU-compatible Bootloader
+
+We would like a bootloader that gets out of the way and lets you run your normal application without needing to short out the **C** pin every time.  We'd also like to not require drivers, or superuser access, or have to deal with other programs thinking Tomu is a GPS or modem (unless it's behaving like one.)  These are all shortcomings that the current bootloader suffers from.
+
+If enough people back Tomu, we will get a bootloader that supports the standard DFU protocol for updating device firmware easily.
+
+### Injection-Molded Plastic Case
+
+Tomu is tiny, and fits entirely inside your USB port.  USB ports have metal shields around them, so Tomu requires a case both to fit snugly inside the port and to protect the components from shorting out against the shield.
+
+The current solution is to 3D print your own case.  However, with enough backers, we can afford to produce an injection-molded plastic case to include with every Tomu purchased.
+
+<hr><br><br>
+
+# U2F / FIDO Firmware
+
+GNU Chopstx has been ported to Tomu, complete with U2F support.  That means you can use Tomu like any U2F token to add a second authentication factor when you log in.  Chrome supports U2F natively, and Firefox supports it via a flag (and will support it fully in a few months)
+
+### Source
+
+The U2F firmware source is located on Github in [im-tomu/chopstx/u2f](https://github.com/im-tomu/chopstx/tree/efm32/u2f).
+
+### Building
+
+To build the U2F firmware, ensure you have an ARM compiler installed (e.g. *sudo apt install gcc-arm-none-eabi*) as well as Python pip (e.g. *pip install --user --upgrade asn1crypto*), then run:
+
+1. pip install --user --upgrade asn1crypto
+1. git clone https://github.com/im-tomu/chopstx.git tomu-u2f
+1. cd tomu-u2f/u2f
+1. make
+
+### Loading onto Tomu
+
+The build system produces an output file *build/u2f.bin*.  Upload this file to Tomu.
+
+* If using the serial bootloader, type **b** and send the file using XMODEM
 
 <hr><br><br>
 
