@@ -30,9 +30,10 @@ To use the seral bootloader, Windows users will need to install Silabs-CDC_Insta
 1. Connect a terminal.
   * TeraTerm on Windows is a good choice.
   * screen works on Linux
-1. Type 'i' to show the bootloader version
-1. Type 'u' to upload a new program, then send the binary using XMODEM
-1. Type 'b' to boot the current program
+1. Interact with the bootloader by sending one-character commands:
+  * **i** -- show the bootloader version
+  * **u** -- upload a new program - send the binary using XMODEM
+  * **b** -- boot the current program
 
 <hr><br><br>
 
