@@ -80,7 +80,7 @@ To build the U2F firmware, ensure you have an ARM compiler installed (e.g. *sudo
 
 The build system produces an output file *build/u2f.bin*.  Upload this file to Tomu.
 
-* If using the serial bootloader, type **b** and send the file using XMODEM
+* If using the serial bootloader, type **u** and send the file using XMODEM
 
 <hr><br><br>
 
