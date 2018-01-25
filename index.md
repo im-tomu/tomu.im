@@ -4,6 +4,13 @@ title: A tiny ARM microprocessor which fits in your USB port.
 permalink: /
 ---
 
+<style>
+.container {
+  max-width: initial;
+}
+</style>
+
+
 # [Tomu, I'm](https://tomu.im)
 
 [I'm Tomu](https://www.crowdsupply.com/sutajio-kosagi/tomu/), a tiny ARM microprocessor which fits in your USB
