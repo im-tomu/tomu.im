@@ -33,7 +33,7 @@ If you have a 3D printer, [download the .stl file](https://github.com/im-tomu/to
 
 For software, Tomu currently uses the SiLabs serial bootloader.  One of the Crowd Supply stretch goals is a universal bootloader based on DFU.
 
-To use the seral bootloader, Windows users will need to install Silabs-CDC_Install.zip, e.g. from [M-Pression](https://www.m-pression.com/solutions/boards/odyssey/odyssey-downloads).  Linux and macOS users do not need to use any special drivers.
+To use the serial bootloader, Windows users will need to install Silabs-CDC_Install.zip, e.g. from [M-Pression](https://www.m-pression.com/solutions/boards/odyssey/odyssey-downloads).  Linux and macOS users do not need to use any special drivers.
 
 1. Enter the bootloader.
   * v0.2 boards require you to connect the C pin to Vcc.
