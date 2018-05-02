@@ -56,7 +56,7 @@ To use the serial bootloader, Windows users will need to install Silabs-CDC_Inst
 
 ### Toboot (DFU Bootloader)
 
-The name of the DFU bootloader is Toboot.  DFU is a USB standard for updating firmware on a device.  The canonical program to use is dfu-util, which is in most major Linux distributions.  When Tomu is in Bootloader mode, it will flash red/green, and show up when you run **dfu-util -l**.
+The name of the DFU bootloader is [Toboot](https://github.com/im-tomu/tomu-bootloader).  DFU is a USB standard for updating firmware on a device.  The canonical program to use is dfu-util, which is in most major Linux distributions.  When Tomu is in Bootloader mode, it will flash red/green, and show up when you run **dfu-util -l**.
 
 ![Toboot DFU mode](img/toboot-mode.gif)
 
