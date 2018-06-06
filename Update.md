@@ -21,9 +21,10 @@ sudo apt-get install dfu-util
 Create `/etc/udev/rules.d/10-tomu.rules` and populate it with the following:
 
 ````udev
-ATTRS{idProduct}=="70b1", ATTRS{idVendor}=="1209", \
-     MODE="664", GROUP="plugdev"
+ATTRS{idProduct}=="70b1", ATTRS{idVendor}=="1209", MODE="777"
 ````
+
+(Note: you can give it a more restrictive mode if you also give it a group that you're in)
 
 ### Fedora
 
