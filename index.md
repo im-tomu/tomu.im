@@ -24,7 +24,11 @@ I'm also available on [Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/
 
 # Getting Started!
 
-Got a Tomu?  Great!  Here's how to get started.  First you need a case, then you need to figure out which bootloader you have.
+Got a Tomu?  Great!  For a hyper-fast quickstart, check out the [Tomu Quickstart repo](https://github.com/im-tomu/tomu-quickstart/).  All you need is `make`, a compiler, and `dfu-util.
+
+More information on the Quickstart repo, including links to precompiled samples, is available at the [quickstart samples](/samples) page.
+
+If you're building one from scratch, you'll need to get a case and a bootloader.  For more information, read on!
 
 ## Case
 
