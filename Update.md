@@ -40,7 +40,7 @@ sudo pacman -Sy dfu-util
 
 ### Windows
 
-Download [dfu-util-static.exe](http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/win32-mingw32/dfu-util-static.exe) from the `dfu-util` repository and rename it to `dfu-util.exe`.  Place it somewhere in your $PATH for convenience.
+Download [dfu-util-static.exe](http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/win32-mingw32/dfu-util-static.exe) from the `dfu-util` repository and rename it to `dfu-util.exe`.  Place it somewhere in your $PATH for convenience.  To build examples, you'll also want to get [dfu-suffix.exe](http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/win32-mingw32/dfu-suffix.exe) and put it in your $PATH.
 
 ### Mac
 
