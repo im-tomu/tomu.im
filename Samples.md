@@ -28,7 +28,7 @@ Platform   | ARM Toolchain  | Make  | dfu-util
 **macOS**      | [GNU Arm Embedded Toolchain](https://developer.arm.com/open-source/gnu-toolchain/gnu-rm/downloads) | [Xcode](https://itunes.apple.com/us/app/xcode/id497799835) | [Homebrew](https://brew.sh/) `brew install dfu-utils`
 **Debian/Ubuntu** | `sudo apt-get install gcc-arm-none-eabi libnewlib-arm-none-eabi` | `sudo apt-get install make` | `sudo apt-get install dfu-util`
 **Fedora** | `sudo dnf install arm-none-eabi-newlib  arm-none-eabi-gcc` | `sudo dnf install make` | `sudo dnf install dfu-util`
-**Arch** | `sudo pacman -S arm-none-eabi-gcc` | `sudo pacman -S make` | `sudo pacman -S dfu-util`
+**Arch** | `sudo pacman -S arm-none-eabi-gcc arm-none-eabi-newlib` | `sudo pacman -S make` | `sudo pacman -S dfu-util`
 
 Additionally, you may want to install `git`, or at least have a way to checkout git repositories.
 
