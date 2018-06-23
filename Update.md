@@ -4,7 +4,30 @@ title: Updating Tomu
 permalink: /update
 ---
 
-Your Tomu must be updated in order to work best.  To work with Tomu, you must first install `dfu-util`.  Once you have `dfu-util` working, updating Tomu is as easy as loading any other program!
+Your Tomu must be updated in order to work best.  To work with Tomu, you can use an experimental method via Google Chrome, otherwise you must first install `dfu-util`.  With either method updating Tomu is as easy as loading any other program!
+
+## Via Google Chrome
+
+### Get Google Chrome
+
+You might know the drill, visit https://google.com/chrome and grab the right version for your platform or install the FOSS version Chromium from your package manager.
+
+### Update Tomu bootloader
+
+Then visit https://devanlai.github.io/webdfu/dfu-util/ with your Tomu plugged in and select the right vendor ID `1209` aka `tapboot` in the options and click "Connect". You should see something like ```Name: Tomu Bootloader v2.0-rc4
+MFG: Kosagi
+Serial: 
+DFU: [1209:70b1] cfg=1, intf=0, alt=0, name="Tomu Bootloader v2.0-rc4" serial=""```
+
+Next, download [toboot-boosted.dfu](https://github.com/im-tomu/tomu-bootloader/raw/master/prebuilt/toboot-boosted.dfu).
+
+Finally update your Tomu by browsing to the `toboot-boosted.dfu` file in the "Firmware Download" area of the page and then click "Download" to flash it to the device. Once that completes you can click "Connect" again to verify the version strings changed.
+
+### Upload a program
+
+To configure a program you can try a prebuilt one from the samples page [Samples](http://tomu.im/samples) or compile your own using the directions there. Put it on your Tomu by browsing to the file in the "Firmware Download" area of the page and then click "Download" to flash it to the device. 
+
+Once a program is installed your Tomu will stop blinking red/green (the DFU bootloader indicator) and will blink whatever is coded into the program while executing it. In initial testing it appears when flashing a program via the WebUSB it doesn't stick permanently, since normally in order to get back into Bootloader mode to flash something else, you would use a tweezer or keep your finger across both contacts when inserting it into the USB port, but in this case you can simply unplug/replug the Tomu to get back to the bootloader.
 
 ## Installing dfu-util
 
