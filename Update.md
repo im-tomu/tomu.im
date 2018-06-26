@@ -14,7 +14,7 @@ You might know the drill, visit https://google.com/chrome and grab the right ver
 
 ### Update Tomu bootloader
 
-Then visit https://devanlai.github.io/webdfu/dfu-util/ with your Tomu plugged in and select the right vendor ID `1209` aka `tapboot` in the options and click "Connect". You should see something like ```Name: Tomu Bootloader v2.0-rc4
+Next visit https://devanlai.github.io/webdfu/dfu-util/ with your Tomu plugged in and select the right vendor ID `0x1209` aka `tapboot` from the prepopulated options or type it and click "Connect". You should see something like ```Name: Tomu Bootloader v2.0-rc4
 MFG: Kosagi
 Serial: 
 DFU: [1209:70b1] cfg=1, intf=0, alt=0, name="Tomu Bootloader v2.0-rc4" serial=""```
@@ -27,7 +27,7 @@ Finally update your Tomu by browsing to the `toboot-boosted.dfu` file in the "Fi
 
 To configure a program you can try a prebuilt one from the samples page [Samples](http://tomu.im/samples) or compile your own using the directions there. Put it on your Tomu by browsing to the file in the "Firmware Download" area of the page and then click "Download" to flash it to the device. 
 
-Once a program is installed your Tomu will stop blinking red/green (the DFU bootloader indicator) and will blink whatever is coded into the program while executing it. In initial testing it appears when flashing a program via the WebUSB it doesn't stick permanently, since normally in order to get back into Bootloader mode to flash something else, you would use a tweezer or keep your finger across both contacts when inserting it into the USB port, but in this case you can simply unplug/replug the Tomu to get back to the bootloader.
+Once a program is installed your Tomu will stop blinking red/green (the DFU bootloader indicator) and will blink whatever is coded into the program while executing it. When flashing any sample program it doesn't stick permanently, in this case you can simply unplug/replug the Tomu to get back to the bootloader. With a non-sample application, once it is flashed they are configured to auto-start on power-up, so in order to get back into Bootloader mode to flash something else you must use a tweezer or paperclip across the outer contacts when inserting it into the USB port (it is important that it is shorted during power-up. I've found that putting the Tomu into a USB extension cable or hub so you can short the connection while plugging the cable with your other hand to be easiest.
 
 ## Installing dfu-util
 
