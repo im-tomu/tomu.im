@@ -112,6 +112,20 @@ The build system produces an output file *build/u2f.bin*.  Upload this file to T
 * If using the serial bootloader, type **u** and send the file using XMODEM
 * If using the DFU bootloader, reboot into DFU mode and run **dfu-util -D build/u2f.bin**
 
+### Updating udev rules
+
+On Linux-based systems you will need to update your entry in `/etc/udev/rules.d/10-tomu.rules` (or create it if you haven't already) to reflect the new product and vendor IDs so that you'll have permissions to the device.
+
+```
+ACTION=="add|change", KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="cdab", TAG+="uaccess"
+```
+
+### Generating private keys on a host machine
+
+During a firmware update, your U2F private key will be erased from the Tomu. This means you won't be able to use it to login into websites anymore.
+
+This can be alleviated by [generating your private key on a host machine](https://github.com/im-tomu/chopstx/tree/efm32/u2f#injecting-private-key) and pushing them on your Tomu.
+
 <hr><br><br>
 
 ## Presentations
