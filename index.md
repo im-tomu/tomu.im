@@ -202,10 +202,9 @@ less**. The default thickness is normally 1.0mm and **1.0mm is too thick**.
 
 These gerbers should be possible with the following manufacturers:
 
-* (Tested) [Hackvana](http://www.hackvana.com/store/)
-* (Undergoing testing) [DirtyPCB](http://dirtypcbs.com/store/pcbs)
-* (Undergoing testing) [Seeed Studio](https://www.seeedstudio.com/fusion_pcb.html)
-* (Yet to be ordered) [OHS Park - 2 Layer 2oz 0.8mm Service](http://docs.oshpark.com/services/two-layer-hhdc/)
+* (Tested) [DirtyPCB](http://dirtypcbs.com/store/pcbs)
+* (Tested) [Seeed Studio](https://www.seeedstudio.com/fusion_pcb.html)
+* (Tested) [OHS Park - 2 Layer 2oz 0.8mm Service](http://docs.oshpark.com/services/two-layer-hhdc/)
 
 ## License
 
