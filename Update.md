@@ -41,13 +41,18 @@ the Tomu bootloader.  Most package managers have some form of
 sudo apt-get install dfu-util
 ````
 
-Create `/etc/udev/rules.d/10-tomu.rules` and populate it with the following:
+Create `/etc/udev/rules.d/10-tomu.rules` and populate it with the following (giving everyone on your system write access to your device):
 
 ````udev
 ATTRS{idProduct}=="70b1", ATTRS{idVendor}=="1209", MODE="777"
 ````
 
-(Note: you can give it a more restrictive mode if you also give it a group that you're in)
+You can give it a more restrictive mode if you also give it a group that you're in, for example:
+
+````udev
+ATTRS{idProduct}=="70b1", ATTRS{idVendor}=="1209", MODE="664", GROUP="plugdev"
+
+````
 
 ### Fedora
 
