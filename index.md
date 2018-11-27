@@ -218,7 +218,7 @@ These gerbers should be possible with the following manufacturers:
 
 * (Tested) [DirtyPCB](http://dirtypcbs.com/store/pcbs)
 * (Tested) [Seeed Studio](https://www.seeedstudio.com/fusion_pcb.html)
-* (Tested) [OHS Park - 2 Layer 2oz 0.8mm Service](http://docs.oshpark.com/services/two-layer-hhdc/)
+* (Tested) [OSH Park - 2 Layer 2oz 0.8mm Service](http://docs.oshpark.com/services/two-layer-hhdc/)
 
 ## License
 
