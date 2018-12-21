@@ -1,3 +1,5 @@
 name: I'm Tomu - A tiny ARM microprocessor which fits in your USB port.
 markdown: kramdown
 theme: jekyll-theme-hacker
+url: 'https://tomu.im'
+permalink: "articles/:title/"
