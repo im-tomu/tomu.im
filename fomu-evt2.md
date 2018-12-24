@@ -55,6 +55,12 @@ Changes need to be made when producing EVT2.  This is the list of changes to mak
 
 **Action:** Add a second PMOD header near the captouch pads.
 
+### ECO003: Mask on USB connector scrapes easily
+
+**Description:** Some USB ports have bits of rough metal that, over time, can scrape away at the solder mask and copper on the USB connector.  This is purely a cosmetic issue, as the layer underneath is ground.
+
+**Action:** Peel back the soldermask and copper layers on the underside of the USB connector, leaving bare FR4.
+
 ---
 
 ## Raspberry Pi Usage
