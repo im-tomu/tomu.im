@@ -28,7 +28,7 @@ This improves on many of the design errors with EVT1.  It also adds the followin
 |1.2V Reg         | Pass
 |2.5V Reg         | Pass
 |3.3V Reg         | Pass 
-|VCCPLL Filter    | Pass       | FAIL (ICE40 doesn't like regulator here)
+|VCCPLL Filter    | Pass      
 |Xtal Oscillator  | Pass
 |SPI Flash        | Pass (QPI) | FAIL (Identifier silk is swapped)
 |USB Pullup       | 
