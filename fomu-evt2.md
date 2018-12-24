@@ -61,6 +61,12 @@ Changes need to be made when producing EVT2.  This is the list of changes to mak
 
 **Action:** Peel back the soldermask and copper layers on the underside of the USB connector, leaving bare FR4.
 
+### ECO004: I3C pins are split between PMOD and DAT4
+
+**Description:** The ICE40 has one pair of I3C-capable pins.  Right now those pins are split between PMOD_1 and DAT4, meaning this function isn't very useful.
+
+**Action:** Swap PMODa_1 and DAT4, so that the PMOD header will have a pair of I3C-compatible pins.
+
 ---
 
 ## Raspberry Pi Usage
