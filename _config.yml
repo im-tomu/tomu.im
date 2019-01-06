@@ -3,3 +3,5 @@ markdown: kramdown
 theme: jekyll-theme-hacker
 url: 'https://tomu.im'
 permalink: "articles/:title/"
+plugins:
+  - jekyll-redirect-from
