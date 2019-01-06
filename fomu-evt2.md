@@ -1,7 +1,10 @@
 ---
 layout: default
 title: A Prototype of an FPGA In Your USB Port
-permalink: /fpga-evt2/
+permalink: /fomu-evt2/
+redirect_from:
+  - /fpga-evt2/
+  - /fpga-evt2
 ---
 
 <style>
