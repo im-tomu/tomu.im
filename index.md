@@ -94,16 +94,19 @@ GNU Chopstx has been ported to Tomu, complete with U2F support.  That means you 
 
 ## Source
 
-The U2F firmware source is located on Github in [im-tomu/chopstx/u2f](https://github.com/im-tomu/chopstx/tree/efm32/u2f).
+The U2F firmware source is located on Github at [gl-sergei/u2f-token](https://github.com/gl-sergei/u2f-token).
 
 ### Building
 
-To build the U2F firmware, ensure you have an ARM compiler installed (e.g. `sudo apt install gcc-arm-none-eabi`) as well as Python pip (e.g. `pip install --user --upgrade asn1crypto`), then run:
+To build the U2F firmware, ensure you have an ARM compiler installed (e.g. `sudo apt install gcc-arm-none-eabi openssl`) as well as Python pip (e.g. `pip install --user --upgrade asn1crypto`), then run:
 
-1. `pip install --user --upgrade asn1crypto`
-1. `git clone https://github.com/im-tomu/chopstx.git tomu-u2f`
-1. `cd tomu-u2f/u2f`
-1. `make`
+```
+git clone https://github.com/gl-sergei/u2f-token.git
+cd u2f-token
+git submodule update --init
+cd src
+make TARGET=TOMU
+```
 
 ### Loading onto Tomu
 
