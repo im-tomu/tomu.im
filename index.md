@@ -36,31 +36,9 @@ Because Tomu fits entirely inside your USB port, you need something to keep it f
 
 If you have a 3D printer, [download the .stl file](https://github.com/im-tomu/tomu-hardware/tree/master/case) for the version of Tomu that you have.  The version number is printed on the bottom side with the big USB connections.  Depending on how thick your PCB is, you may need to adjust the FreeCAD file.
 
-## Bootloader
+## Bootloader -- Toboot (DFU Bootloader)
 
-There are two types of bootloaders for Tomu: Serial and DFU.  If you got your board from Crowd Supply, or updated it using the test jig at LCA 2018, or the LEDs blink red/green when you plug it in, then you have DFU.  Otherwise, you have Serial.
-
-### Serial Bootloader (Legacy)
-The serial bootloader is from SiLabs, and is known as [AN0042](https://www.silabs.com/documents/public/application-notes/an0042-efm32-usb-uart-bootloader.pdf).
-
-To use the serial bootloader, Windows users will need to install Silabs-CDC_Install.zip, e.g. from [M-Pression](https://www.m-pression.com/solutions/boards/odyssey/odyssey-downloads).  Linux and macOS users do not need to use any special drivers.  The device will show up as something like /dev/ttyUSB0.
-
-1. Enter the bootloader.
-  * v0.2 boards require you to connect the C pin to Vcc.
-  * v0.3 boards always enter the bootloader
-1. Connect a terminal.
-  * TeraTerm on Windows is a good choice
-  * screen works on Linux and macOS
-1. Interact with the bootloader by sending one-character commands:
-  * **i** -- show the bootloader version
-  * **u** -- upload a new program - send the binary using XMODEM
-  * **b** -- boot the current program
-
-**Note that the 'd' command will delete the bootloader, so use with caution!!!**
-
-### Toboot (DFU Bootloader)
-
-The name of the DFU bootloader is [Toboot](https://github.com/im-tomu/tomu-bootloader).  DFU is a USB standard for updating firmware on a device.  The canonical program to use is dfu-util, which is in most major Linux distributions.  When Tomu is in Bootloader mode, it will flash red/green, and show up when you run `dfu-util -l`.
+The name of the DFU bootloader is [Toboot](https://github.com/im-tomu/tomu-bootloader).  DFU is a USB standard for updating firmware on a device.  The canonical program to use is `dfu-util`, which is in most major Linux distributions.  When Tomu is in Bootloader mode, it will flash red/green, and show up when you run `dfu-util -l`.
 
 ![Toboot DFU mode](img/toboot-mode.gif)
 
@@ -72,19 +50,9 @@ To load a program, run `dfu-util -D [program].bin`.  Toboot will flash the new p
 
 # Back Us!
 
-Tomu is [crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!  We have met the following stretch goals, and their development is already underway:
+Tomu is [crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!
 
-### DFU-compatible Bootloader
-
-We would like a bootloader that gets out of the way and lets you run your normal application without needing to short out the **C** pin every time.  We'd also like to not require drivers, or superuser access, or have to deal with other programs thinking Tomu is a GPS or modem (unless it's behaving like one.)  These are all shortcomings that the current bootloader suffers from.
-
-Enough people have backed Tomu that we have developed an initial DFU bootloader that meets all these goals.  Although the initial version is ready, it has some wrinkles that we intend to iron out before shipment.
-
-### Injection-Molded Plastic Case
-
-Tomu is tiny, and fits entirely inside your USB port.  USB ports have metal shields around them, so Tomu requires a case both to fit snugly inside the port and to protect the components from shorting out against the shield.
-
-The current solution is to 3D print your own case.  Since we've met this stretch goal, we've redesigned the board and have begun working on a steel tool to injection-mold a plastic case.
+Fomu, the FPGA version of Tomu, is [also crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!
 
 <hr><br><br>
 
@@ -112,8 +80,8 @@ make TARGET=TOMU
 
 The build system produces an output file build/u2f.bin.  Upload this file to Tomu.
 
-* If using the serial bootloader, type **u** and send the file using XMODEM
 * If using the DFU bootloader, reboot into DFU mode and run `dfu-util -D build/u2f.bin`
+* If using the legacy serial bootloader, type **u** and send the file using XMODEM
 
 ### Updating udev rules
 
