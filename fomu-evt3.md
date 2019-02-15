@@ -25,7 +25,7 @@ Fomu EVT3 requires the following components:
 1. Raspberry Pi
 1. SD Card
 
-Download the Fomu Rasberry Pi image and write it to an SD card.  This can be done in a variety of ways.  You can consult the [official Raspberry Pi documentation](https://www.raspberrypi.org/documentation/installation/installing-images/) for recommendations on how to do this.
+Download the [latest Fomu Pi Image release](https://github.com/im-tomu/fomu-pi-gen/releases/latest) image and write it to an SD card.  This can be done in a variety of ways.  You can consult the [official Raspberry Pi documentation](https://www.raspberrypi.org/documentation/installation/installing-images/) for recommendations on how to do this.
 
 Insert the SD card into your Raspberry Pi and apply power.  The first time it runs, it will reboot several times.  This is because it's doing various setup processes such as generating SSH keys and creating the user partition.
 
