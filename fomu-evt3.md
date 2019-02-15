@@ -56,3 +56,33 @@ fomu-flash -f blink.bin
 ```
 
 ![Fomu EVT1](img/tomu-fpga-evt-1-smaller.jpg)
+
+## About the Fomu Raspberry Pi Image
+
+The Fomu Raspberry Pi image has a number of design decisions that may seem unusual at first.
+
+### The root filesystem is mounted readonly
+
+SD cards have a tendency to become corrupt when writing to them as you remove power.  Unfortunately, removing power causes log messages to be generated, which are written to disk just as power is removed.  Some cards can only survive a few power cycles before they become completely unusable.
+
+Making the root filesystem readonly solves this problem completely.  It is easy enough to temporarily make root read-write:
+
+`sudo mount -oremount,rw /`
+
+However, this should only be done if you need to do something such as updating packages.  In general, you should leave it mounted readonly.
+
+### /home is its own partition
+
+This was done in order to make the home directory read-write.
+
+### Time is set using htpdate
+
+Sometimes ntp is blocked.  Furthermore, ntp doesn't like to adjust the time by relatively large amounts.  By using htpdate in "force" mode, we avoid needing special ports open and the Pi just needs internet access.
+
+### There is no GUI
+
+This build was designed to be accessed via a command line.  However, a GUI can be installed using `apt`.
+
+### There is no Risc-V compiler
+
+This is a known issue, and we're working to build one for it.
