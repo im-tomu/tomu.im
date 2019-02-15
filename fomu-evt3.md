@@ -12,7 +12,7 @@ redirect_from:
   max-width: initial;
 }
 </style>
-1
+
 # Fomu EVT3
 
 Fomu EVT3 is the revision that shipped for _Crowd Supply_ backers of the **Fomu EVT Board** tier.  This page covers how to get started, as well as what you can expect to do with the board.
