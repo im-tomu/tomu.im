@@ -58,7 +58,7 @@ Fomu, the FPGA version of Tomu, is [also crowdfunding on Crowd Supply](https://w
 
 # U2F / FIDO Firmware
 
-GNU Chopstx has been ported to Tomu, complete with U2F support.  That means you can use Tomu like any U2F token to add a second authentication factor when you log in.  Chrome supports U2F natively, and Firefox supports it via a flag (and will support it fully in a few months)
+GNU Chopstx has been ported to Tomu, complete with U2F support.  That means you can use Tomu like any U2F token to add a second authentication factor when you log in.  Chrome and Firefox support U2F natively.
 
 ## Source
 
