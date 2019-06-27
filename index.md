@@ -52,7 +52,7 @@ To load a program, run `dfu-util -D [program].bin`.  Toboot will flash the new p
 
 Tomu is [crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!
 
-Fomu, the FPGA version of Tomu, is [also crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/tomu/)!
+Fomu, the FPGA version of Tomu, is [also crowdfunding on Crowd Supply](https://www.crowdsupply.com/sutajio-kosagi/fomu/)!
 
 <hr><br><br>
 
