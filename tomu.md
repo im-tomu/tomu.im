@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Tomu - A tiny ARM microprocessor which fits in your USB port.
+permalink: /tomu.html
 ---
 
 <style>
@@ -9,9 +10,7 @@ title: Tomu - A tiny ARM microprocessor which fits in your USB port.
 }
 </style>
 
-# [Tomu, I'm](https://tomu.im)
-
-![logos/tomu.png]
+![](/img/logos/tomu.png)
 
 [I'm Tomu](https://tomu.im/tomu.html), a tiny ARM microprocessor which fits in your USB port. I have two buttons and two LEDs!
 

@@ -1,0 +1,13 @@
+---
+layout: default
+title: The Fomu family.
+permalink: /specs.html
+---
+<table>
+  <tr>
+   {% for d_hash in site.data.specs|sorted %}
+    {% assign d = d_hash[1] %}
+    <th>{{ d.name }} {{ d.variant }}</th>
+   {% endfor %}
+  </tr>
+</table>
