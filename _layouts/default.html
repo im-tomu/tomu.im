@@ -27,6 +27,48 @@
   </head>
 
   <body>
+    <header>
+<style>
+div.header {
+  margin-left: 4em;
+}
+div.header h1 {
+  border: none;
+}
+div.header h1 a {
+  color: #b5e853;
+  text-decoration: none;
+}
+div.header-logos {
+  margin: auto auto;
+  overflow: hidden;
+  float: right;
+  height: 5em;
+  margin-right: 2em;
+}
+img.header-logo {
+  style: block;
+  height: 100%;
+  padding: 2px;
+}
+</style>
+      <div class="header">
+        <div class="header-logos">
+          <a href="/tomu.html"><img class="header-logo" src="/img/logos/tomu.png"></a>
+	  <a href="/fomu.html"><img class="header-logo" src="/img/logos/fomu.png"></a>
+	  <a href="/somu.html"><img class="header-logo" src="/img/logos/somu.png"></a>
+	  <a href="/womu.html"><img class="header-logo" src="/img/logos/womu.png"></a>
+        </div>
+        <h1><a href="https://tomu.im">I'm Tomu</a></h1>
+        <h2>A family of devices which fit inside your USB port!</h2>
+      </div>
+    </header>
+
+<style>
+div.container {
+  max-width: 90%;
+}
+</style>
     <div class="container">
       <section id="main_content">
         {{ content }}
