@@ -4,10 +4,10 @@ title: Womu - An ESP32 which fits in your USB port.
 permalink: /womu.html
 ---
 
-# Womu, I'm
+# Bomu, I'm
 
 Coming soon!
 
 ## Specs
 
-{% include spec.html device='womu' %}
+{% include spec.html device='bomu' %}

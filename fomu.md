@@ -27,3 +27,17 @@ I'm available for [pre-order now on Crowd Supply](https://www.crowdsupply.com/su
 # History
 
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRiPeIvvWhA6BX0Q4NYMEbRuZSlhxvM6I2baZi7JBeXF214rE6siQQ5WeH9j40MzGoekYu9JnbAS5CR/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+# Specs
+
+## Fomu Production (PVT1) Board
+
+{% include spec.html device='fomu-pvt1' %}
+
+## Fomu Hacker Board
+
+{% include spec.html device='fomu-hacker' %}
+
+## Fomu Evaluation (EVT1) Board
+
+{% include spec.html device='fomu-evt1' %}
