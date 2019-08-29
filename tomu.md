@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tomu - A tiny ARM microprocessor which fits in your USB port.
+title: Tomu - A ARM microprocessor which fits in your USB port.
 permalink: /tomu.html
 ---
 
