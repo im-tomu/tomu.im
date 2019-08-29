@@ -137,11 +137,7 @@ The biggest part of this is the emulation of the USB stack.
 
 <hr><br><br>
 
-# Contact
-
-* [Announcement mailing list](https://groups.google.com/forum/#!forum/tomu-announce/join) - Low traffic list for announcements.
-* [Discussion mailing list](https://groups.google.com/forum/#!forum/tomu-discuss/join) - List for discussing development / new features / etc.
-* [IRC Channel - irc://irc.freenode.net/#tomu](https://webchat.freenode.net/?channels=#tomu) - IRC channel for discussing anything related to the project.
+{% include contact.md %}
 
 <hr><br><br>
 
@@ -169,12 +165,7 @@ All Tomu boards have:
 
 ### Specs
 
-* Uses a Silicon Labs Happy Gecko EFM32HG309
-  * 25MHz ARM Cortex-M0+
-  * 8kb^ RAM
-  * 64kb^ Flash
-  * USB 2.0 FS and LS
-* Literally 12 parts
+{% include spec.html device='tomu-self-made' %}
 
 ### Gerbers
 

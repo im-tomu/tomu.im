@@ -37,6 +37,12 @@ def convert(l):
     return o
 
 
+def replace_many(s, chars, r):
+    for c in chars:
+        s = s.replace(c, r)
+    return s
+
+
 def get_header(l):
     if ''.join(str(x) for x in l[1:]) == '':
         return l[0], []
@@ -88,8 +94,7 @@ for pn in parts_name:
 for (s, n), d in row_data:
     if s:
         n = '%s_%s' % (s, n)
-    n = n.lower()
-    n = n.replace(' ', '_')
+    n = replace_many(n.lower(), ' -/', '_')
     for pn, v in zip(parts_name, d):
         output_data[pn][n] = v
 

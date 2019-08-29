@@ -3,11 +3,277 @@ layout: default
 title: The Fomu family.
 permalink: /specs.html
 ---
-<table>
+<style>
+table.spec-table {
+  width: auto;
+}
+
+table.spec-table tr.header:nth-child(odd) {
+  background-color: #151515;
+}
+table.spec-table tr.header:nth-child(even) {
+  background-color: #151515;
+}
+
+table.spec-table tr:nth-child(even) {
+  background-color: #333333;
+}
+
+table.spec-table th {
+  text-align: right;
+  border-bottom: none;
+}
+
+table.spec-table tr.header th {
+  padding-top: 1em;
+  text-align: center;
+}
+
+table.spec-table th div {
+  text-align: center;
+  display: inline-block;
+}
+
+table.spec-table td {
+  text-align: left;
+}
+
+table.spec-table h3 {
+  text-decoration: none;
+  border-bottom: 1px dashed #b5e853;
+  width: fit-content;
+  margin: auto;
+}
+
+table.spec-table img {
+}
+</style>
+{% assign devices = site.data.specs|sorted %}
+{% assign colspan = devices|size %}
+<table class="spec-table">
   <tr>
-   {% for d_hash in site.data.specs|sorted %}
-    {% assign d = d_hash[1] %}
-    <th>{{ d.name }} {{ d.variant }}</th>
-   {% endfor %}
+    <td></td>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td><img height="100" src="/img/logos/{{ d.name|downcase }}.png"></td>
+    {% endfor %}
+  </tr><tr>
+    <th>Name</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.name }}{% if d.variant != "" %}({{ d.variant }}){% endif %}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Manufacturer</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.manufacturer }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Status</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.status }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     {% if d.status == "For sale" %}
+      <td><a href="{{  }}">Buy now!</a></td>
+     {% elsif d.status == "Crowdfunding" %}
+      <td><a href="{{  }}">Back now!</a></td>
+     {% else %}
+      <td>&nbsp;</td>
+     {% endif %}
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Microprocessor</h3></th>
+  </tr><tr>
+    <th>Architecture</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.microprocessor_architecture }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Manufacturer</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.microprocessor_manufacturer }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Part</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td><a href="{{ d.microprocessor_part_link }}">{{ d.microprocessor_part }}</a></td>
+    {% endfor %}
+  </tr><tr>
+    <th>Datasheet</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.microprocessor_datasheet }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Class</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.microprocessor_class }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Frequency</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.microprocessor_mhz|round }} MHz (Max)</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Benchmarks</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.microprocessor_coremark_mhz|round }} CoreMark/MHz, {{ d.microprocessor_dmips_mhz|round }} DMips/MHz</td>
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Storage</h3></th>
+  </tr><tr>
+    <th>Memory</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.storage_memory|round }} kilo<b>bytes</b></td>
+    {% endfor %}
+  </tr><tr>
+    <th>Flash</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.storage_flash|round }} kilo<b>bytes</b></td>
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Toolchain Support</h3></th>
+  </tr><tr>
+    <th>Bare Metal C</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_bare_metal_c }}
+      (<a href="https://gcc.gnu.org">GCC</a>: {{ d.software_gcc_status }}, <a href="https://llvm.org">LLVM</a>: {{ d.software_llvm_status }})
+     </td>
+    {% endfor %}
+  </tr><tr>
+    <th><a href="https://rust-embedded.github.io/book/">Embedded Rust</a></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_bare_metal_rust }}</td>
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Software Support</h3></th>
+  </tr><tr>
+    <th><div><a href="https://www.zephyrproject.org/"><img src="/img/logos/external/zephyr.png"><br>Zephyr</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_zephyr }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th><div><a href="https://micropython.org/"><img src="/img/logos/external/micropython.png"><br>MicroPython</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_micropython }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th><div><a href="https://circuitpython.org/"><img src="/img/logos/external/circuitpython.png"><br>CircuitPython</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_circuit_python }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th><div><a href="https://nuttx.org/"><img src="/img/logos/external/nuttx.png"><br>NuttX</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_nuttx }}</td>
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Emulation Support</h3></th>
+  </tr><tr>
+    <th><div><a href="https://qemu.org/"><img src="/img/logos/external/qemu.png"><br>QEMU</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.emulation_qemu }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th><div><a href="https://renode.io/"><img src="/img/logos/external/renode.png"><br>Renode</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.emulation_renode }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th><div><a href="https://verilator.org/"><img src="/img/logos/external/verilator.png"><br>Verilator</a></div></th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.emulation_verilator }}</td>
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Security Key Support</h3></th>
+  </tr><tr>
+    <th>U2F</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_u2f }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>FIDO2</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.software_fido2 }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Secure Key Storage</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{  }}</td>
+    {% endfor %}
+  </tr><tr class="header">
+    <th colspan="{{ colspan }}"><h4>Crypto</h4></th>
+  </tr><tr>
+    <th>Crypto Acceleration</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.crypto_acceleration }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Hardware Random Number Generator</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.crypto_random_number_generator }}</td>
+    {% endfor %}
+  </tr>
+  <!-- ====================== -->
+  <tr class="header">
+    <th colspan="{{ colspan }}"><h3>Links</h3></th>
+  </tr><tr>
+    <th>Schematics</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.links_schematics }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Bootloader Code</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.links_bootloader }}</td>
+    {% endfor %}
+  </tr><tr>
+    <th>Quick Start Code</th>
+    {% for d_hash in devices %}
+     {% assign d = d_hash[1] %}
+     <td>{{ d.links_quickstart }}</td>
+    {% endfor %}
   </tr>
 </table>
