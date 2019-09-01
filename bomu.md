@@ -1,13 +1,21 @@
 ---
 layout: default
-title: Womu - An ESP32 which fits in your USB port.
+title: Bomu - A bluetooth microprocessor which fits in your USB port.
 permalink: /bomu.html
 ---
+
+<style>
+.container {
+  max-width: initial;
+}
+</style>
+
+![](/img/logos/bomu.png)
 
 # Bomu, I'm
 
 Coming soon!
 
-## Specs
+# Specs
 
 {% include spec.html device='bomu' %}
