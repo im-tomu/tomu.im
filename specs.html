@@ -61,7 +61,7 @@ table.spec-table img {
     <th>Name</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.name }}{% if d.variant != "" %}({{ d.variant }}){% endif %}</td>
+     <td>{{ d.name }}{% if d.variant != "" %} ({{ d.variant }}){% endif %}</td>
     {% endfor %}
   </tr><tr>
     <th>Manufacturer</th>
@@ -80,9 +80,9 @@ table.spec-table img {
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
      {% if d.status == "For sale" %}
-      <td><a href="{{  }}">Buy now!</a></td>
+      <td><a href="{{ d.links_buy }}">Buy now!</a></td>
      {% elsif d.status == "Crowdfunding" %}
-      <td><a href="{{  }}">Back now!</a></td>
+      <td><a href="{{ d.links_buy }}">Back now!</a></td>
      {% else %}
       <td>&nbsp;</td>
      {% endif %}
@@ -157,15 +157,15 @@ table.spec-table img {
     <th>Bare Metal C</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_bare_metal_c }}
-      (<a href="https://gcc.gnu.org">GCC</a>: {{ d.software_gcc_status }}, <a href="https://llvm.org">LLVM</a>: {{ d.software_llvm_status }})
+     <td>{{ d.software_support_bare_metal_c }}
+      (<a href="https://gcc.gnu.org">GCC</a>: {{ d.software_support_gcc_status }}, <a href="https://llvm.org">LLVM</a>: {{ d.software_support_llvm_status }})
      </td>
     {% endfor %}
   </tr><tr>
     <th><a href="https://rust-embedded.github.io/book/">Embedded Rust</a></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_bare_metal_rust }}</td>
+     <td>{{ d.software_support_bare_metal_rust }}</td>
     {% endfor %}
   </tr>
   <!-- ====================== -->
@@ -175,25 +175,25 @@ table.spec-table img {
     <th><div><a href="https://www.zephyrproject.org/"><img src="/img/logos/external/zephyr.png"><br>Zephyr</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_zephyr }}</td>
+     <td>{{ d.software_support_zephyr }}</td>
     {% endfor %}
   </tr><tr>
     <th><div><a href="https://micropython.org/"><img src="/img/logos/external/micropython.png"><br>MicroPython</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_micropython }}</td>
+     <td>{{ d.software_support_micropython }}</td>
     {% endfor %}
   </tr><tr>
     <th><div><a href="https://circuitpython.org/"><img src="/img/logos/external/circuitpython.png"><br>CircuitPython</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_circuit_python }}</td>
+     <td>{{ d.software_support_circuit_python }}</td>
     {% endfor %}
   </tr><tr>
     <th><div><a href="https://nuttx.org/"><img src="/img/logos/external/nuttx.png"><br>NuttX</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_nuttx }}</td>
+     <td>{{ d.software_support_nuttx }}</td>
     {% endfor %}
   </tr>
   <!-- ====================== -->
@@ -203,19 +203,19 @@ table.spec-table img {
     <th><div><a href="https://qemu.org/"><img src="/img/logos/external/qemu.png"><br>QEMU</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.emulation_qemu }}</td>
+     <td>{{ d.software_support_qemu_emulation }}</td>
     {% endfor %}
   </tr><tr>
     <th><div><a href="https://renode.io/"><img src="/img/logos/external/renode.png"><br>Renode</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.emulation_renode }}</td>
+     <td>{{ d.software_support_renode_emulation }}</td>
     {% endfor %}
   </tr><tr>
     <th><div><a href="https://verilator.org/"><img src="/img/logos/external/verilator.png"><br>Verilator</a></div></th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.emulation_verilator }}</td>
+     <td>{{ d.software_support_verilator_emulation }}</td>
     {% endfor %}
   </tr>
   <!-- ====================== -->
@@ -225,19 +225,19 @@ table.spec-table img {
     <th>U2F</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_u2f }}</td>
+     <td>{{ d.software_support_u2f }}</td>
     {% endfor %}
   </tr><tr>
     <th>FIDO2</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.software_fido2 }}</td>
+     <td>{{ d.software_support_fido2 }}</td>
     {% endfor %}
   </tr><tr>
     <th>Secure Key Storage</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{  }}</td>
+     <td>?</td>
     {% endfor %}
   </tr><tr class="header">
     <th colspan="{{ colspan }}"><h4>Crypto</h4></th>
@@ -261,19 +261,19 @@ table.spec-table img {
     <th>Schematics</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.links_schematics }}</td>
+     <td><a href="{{ d.links_schematics }}">Link</a></td>
     {% endfor %}
   </tr><tr>
     <th>Bootloader Code</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.links_bootloader }}</td>
+     <td><a href="{{ d.links_bootloader }}">Link</a></td>
     {% endfor %}
   </tr><tr>
     <th>Quick Start Code</th>
     {% for d_hash in devices %}
      {% assign d = d_hash[1] %}
-     <td>{{ d.links_quickstart }}</td>
+     <td><a href="{{ d.links_quickstart }}">Link</a></td>
     {% endfor %}
   </tr>
 </table>

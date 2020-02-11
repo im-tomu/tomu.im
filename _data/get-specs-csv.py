@@ -25,9 +25,9 @@ def convert(l):
         v = v.replace(',','')
 
         if v == 'No':
-            v = False
+            v = 'No' #False
         elif v == 'Yes':
-            v = True
+            v = 'Yes' #True
         else:
             try:
                 v = float(v)
@@ -98,6 +98,7 @@ for (s, n), d in row_data:
     for pn, v in zip(parts_name, d):
         output_data[pn][n] = v
 
+del output_data['?omu']
 pprint.pprint(output_data)
 with open('specs.json', 'w') as f:
     json.dump(output_data, f, sort_keys=True, indent=2)

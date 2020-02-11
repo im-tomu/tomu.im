@@ -50,7 +50,7 @@ table.spec-table img {
     <td><img height="100" src="/img/logos/{{ d.name|downcase }}.png"></td>
   </tr><tr>
     <th>Name</th>
-    <td>{{ d.name }}{% if d.variant != "" %}({{ d.variant }}){% endif %}</td>
+    <td>{{ d.name }}{% if d.variant != "" %} ({{ d.variant }}){% endif %}</td>
   </tr><tr>
     <th>Manufacturer</th>
     <td>{{ d.manufacturer }}</td>
@@ -108,54 +108,54 @@ table.spec-table img {
     <th colspan="2"><h3>Toolchain Support</h3></th>
   </tr><tr>
     <th>Bare Metal C</th>
-    <td>{{ d.software_bare_metal_c }}
-     (<a href="https://gcc.gnu.org">GCC</a>: {{ d.software_gcc_status }}, <a href="https://llvm.org">LLVM</a>: {{ d.software_llvm_status }})
+    <td>{{ d.software_support_bare_metal_c }}
+     (<a href="https://gcc.gnu.org">GCC</a>: {{ d.software_support_gcc_status }}, <a href="https://llvm.org">LLVM</a>: {{ d.software_support_llvm_status }})
     </td>
   </tr><tr>
     <th><a href="https://rust-embedded.github.io/book/">Embedded Rust</a></th>
-    <td>{{ d.software_bare_metal_rust }}</td>
+    <td>{{ d.software_support_bare_metal_rust }}</td>
   </tr>
   <!-- ====================== -->
   <tr class="header">
     <th colspan="2"><h3>Software Support</h3></th>
   </tr><tr>
-		<th><div><a href="https://www.zephyrproject.org/"><img src="/img/logos/external/zephyr.png"><br>Zephyr</a></div></th>
-    <td>{{ d.software_zephyr }}</td>
+    <th><div><a href="https://www.zephyrproject.org/"><img src="/img/logos/external/zephyr.png"><br>Zephyr</a></div></th>
+    <td>{{ d.software_support_zephyr }}</td>
   </tr><tr>
-		<th><div><a href="https://micropython.org/"><img src="/img/logos/external/micropython.png"><br>MicroPython</a></div></th>
-    <td>{{ d.software_micropython }}</td>
+    <th><div><a href="https://micropython.org/"><img src="/img/logos/external/micropython.png"><br>MicroPython</a></div></th>
+    <td>{{ d.software_support_micropython }}</td>
   </tr><tr>
     <th><div><a href="https://circuitpython.org/"><img src="/img/logos/external/circuitpython.png"><br>CircuitPython</a></div></th>
-    <td>{{ d.software_circuit_python }}</td>
+    <td>{{ d.software_support_circuit_python }}</td>
   </tr><tr>
     <th><div><a href="https://nuttx.org/"><img src="/img/logos/external/nuttx.png"><br>NuttX</a></div></th>
-    <td>{{ d.software_nuttx }}</td>
+    <td>{{ d.software_support_nuttx }}</td>
   </tr>
   <!-- ====================== -->
   <tr class="header">
     <th colspan="2"><h3>Emulation Support</h3></th>
   </tr><tr>
 		<th><div><a href="https://qemu.org/"><img src="/img/logos/external/qemu.png"><br>QEMU</a></div></th>
-    <td>{{ d.emulation_qemu }}</td>
+    <td>{{ d.software_support_qemu_emulation }}</td>
   </tr><tr>
     <th><div><a href="https://renode.io/"><img src="/img/logos/external/renode.png"><br>Renode</a></div></th>
-    <td>{{ d.emulation_renode }}</td>
+    <td>{{ d.software_support_renode_emulation }}</td>
   </tr><tr>
     <th><div><a href="https://verilator.org/"><img src="/img/logos/external/verilator.png"><br>Verilator</a></div></th>
-    <td>{{ d.emulation_verilator }}</td>
+    <td>{{ d.software_support_verilator_emulation }}</td>
   </tr>
   <!-- ====================== -->
   <tr class="header">
     <th colspan="2"><h3>Security Key Support</h3></th>
   </tr><tr>
     <th>U2F</th>
-    <td>{{ d.software_u2f }}</td>
+    <td>{{ d.software_support_u2f }}</td>
   </tr><tr>
     <th>FIDO2</th>
-    <td>{{ d.software_fido2 }}</td>
+    <td>{{ d.software_support_fido2 }}</td>
   </tr><tr>
     <th>Secure Key Storage</th>
-    <td>{{  }}</td>
+    <td>?</td>
   </tr><tr class="header">
     <th colspan="2"><h4>Crypto</h4></th>
   </tr><tr>
