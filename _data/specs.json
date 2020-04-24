@@ -256,7 +256,7 @@
     "sizing_fits_inside_your_usb_port": "Yes",
     "software_support_bare_metal_c": "Yes",
     "software_support_bare_metal_rust": "Yes",
-    "software_support_circuit_python": "In Progress",
+    "software_support_circuit_python": "Yes",
     "software_support_dfu_bootloader": "foboot",
     "software_support_fido2": "Not Yet",
     "software_support_gcc_status": "?",
