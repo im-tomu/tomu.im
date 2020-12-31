@@ -86,7 +86,7 @@ The build system produces an output file build/u2f.bin.  Upload this file to Tom
 On Linux-based systems you will need to update your entry in `/etc/udev/rules.d/10-tomu.rules` (or create it if you haven't already) to reflect the new product and vendor IDs so that you'll have permissions to the device.
 
 ```
-ACTION=="add|change", KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="cdab", TAG+="uaccess"
+ACTION=="add|change", KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="70b1", TAG+="uaccess"
 ```
 
 ### Generating private keys on a host machine
